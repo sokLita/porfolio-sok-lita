@@ -1,0 +1,477 @@
+/* ================== GLOBAL ================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    /* CHANGED for Dark Theme: Deep Purple/Black */
+    background-color: #120124; 
+    /* CHANGED for Dark Theme: Off-White Text */
+    color: #e0e0e0; 
+}
+
+/* ================== NAVBAR ================== */
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    height: 80px;
+    /* CHANGED for Dark Theme: Slightly Lighter Purple for NavBar */
+    background-color: #1e0238; 
+    /* CHANGED: Darker Shadow */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.5); 
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.container h1 {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.container strong {
+    /* ACCENT COLOR: Neon Teal/Cyan */
+    color: #00f7c2; 
+}
+
+.navbar a {
+    text-decoration: none;
+    padding: 20px;
+    /* CHANGED for Dark Theme: Light Gray Link Text */
+    color: #c0c0c0; 
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.navbar a:hover {
+    /* ACCENT COLOR: Neon Teal/Cyan */
+    color: #00f7c2; 
+    border-bottom: 2px solid #00f7c2;
+}
+button a{
+    text-decoration: none;
+    /* CHANGED: Dark Text on Bright Button */
+    color: #120124; 
+}
+
+/* ================== HOME ================== */
+#home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    padding: 0 50px;
+}
+
+.main {
+    display: flex;
+    gap: 80px;
+    align-items: center;
+    /* height: 80vh; */
+}
+
+#circle {
+    width: 500px;
+    height: 540px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+#circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0px); }
+}
+
+.title {
+    max-width: 600px;
+}
+
+.title h2 {
+    font-size: 36px;
+    font-weight: 700;
+}
+
+.title h3 {
+    font-size: 28px;
+    margin-top: 10px;
+}
+
+.title strong {
+    /* ACCENT COLOR: Neon Teal/Cyan */
+    color: #00f7c2; 
+}
+
+.btn {
+    margin-top: 30px;
+    display: flex;
+    gap: 20px;
+}
+
+.btn button {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    /* ACCENT COLOR: Neon Teal/Cyan */
+    background-color: #00f7c2; 
+    /* Dark Text on Bright Button */
+    color: #120124; 
+    transition: all 0.3s ease;
+}
+
+.btn button:hover {
+    /* Darker Teal for Hover */
+    transform: translateY(-5px) scale(1.05);
+    background-color: #00b08a; 
+}
+
+/* ================== ABOUT ================== */
+#about {
+    display: flex;
+    align-items: center;
+    gap: 100px;
+    padding: 80px 50px;
+    /* CHANGED for Dark Theme: Main Background Color */
+    background-color: #120124; 
+    /* CHANGED: Dark Separator */
+    border-top: 2px solid #331551; 
+}
+
+#about h1 {
+    font-size: 32px;
+    /* ACCENT COLOR: Neon Teal/Cyan */
+    color: #00f7c2; 
+    margin-bottom: 20px;
+}
+
+#aboutme {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+#rectangle img {
+    width: 400px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* ================== SKILLS ================== */
+#skills {
+    padding: 80px 50px;
+    /* CHANGED for Dark Theme: Section Background Color */
+    background-color: #1e0238; 
+}
+
+#skills h1 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 32px;
+}
+
+.hard {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    animation: float 4s ease-in-out infinite;
+}
+
+.box1 {
+    width: 140px;
+    text-align: center;
+    /* CHANGED for Dark Theme: Darker Skill Box Background */
+    background-color: #331551; 
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.box1:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.3);
+}
+
+.box1 img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+}
+
+.box1 p {
+    font-weight: 600;
+    /* CHANGED for Dark Theme: Light Text */
+    color: #e0e0e0; 
+}
+
+/* ================== PROJECT ================== */
+#project {
+    padding: 80px 50px;
+}
+
+#project h1 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 50px;
+}
+
+.learn {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+}
+
+.project1 {
+    /* CHANGED for Dark Theme: Project Box Background */
+    background-color: #331551; 
+    padding: 25px;
+    width: 350px;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+}
+
+.project1:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.3);
+}
+
+.project1 h2 {
+    text-align: center;
+    /* ACCENT COLOR: Neon Teal/Cyan */
+    color: #00f7c2; 
+    margin-bottom: 15px;
+}
+
+.project1 img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-top: 15px;
+}
+
+/* ================== EDUCATION ================== */
+#edu {
+    padding: 80px 50px;
+    /* CHANGED for Dark Theme: Section Background Color */
+    background-color: #1e0238; 
+}
+
+#edu h1 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 32px;
+}
+
+.main1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.box4 {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    /* CHANGED for Dark Theme: Education Box Background */
+    background-color: #331551; 
+    padding: 15px 20px;
+    width: 550px;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+.sticker img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+.photo img{
+    width: 500px;
+    /* background-color: blue; */
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+    /* margin-bottom: 200px; */
+    border-radius: 10px;
+}
+
+/* ================== CONTACT ================== */
+#contact {
+    padding: 80px 50px;
+}
+
+#contact h1 {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 32px;
+}
+
+.call {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+}
+
+.input {
+    /* CHANGED for Dark Theme: Contact Form Background */
+    background-color: #331551; 
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+    max-width: 600px;
+    width: 100%;
+}
+
+.input input,
+.input textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    /* CHANGED: Input fields for dark theme */
+    border: 1px solid #6c4b8d; 
+    background-color: #4a286b; 
+    color: #e0e0e0;
+}
+
+#message {
+    height: 120px;
+}
+
+.input button {
+    /* ACCENT COLOR: Neon Teal/Cyan */
+    background-color: #00f7c2; 
+    /* Dark Text on Bright Button */
+    color: #120124; 
+    padding: 12px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.input button:hover {
+    /* Darker Teal for Hover */
+    background-color: #00b08a;
+}
+
+/* ================== CONTACT INFO ================== */
+.phone {
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin-top: 150px;
+}
+
+.phone i {
+    /* ACCENT COLOR: Neon Teal/Cyan */
+    color: #00f7c2; 
+    margin-right: 10px;
+    font-size: 24px;
+}
+.gmail{
+    align-items: center;
+    display: flex;
+    gap: 10px;
+    padding-bottom: 24px;
+
+}
+.number{
+    align-items: center;
+    display: flex;
+    gap: 10px;
+    padding-bottom: 24px;
+}
+.address{
+    align-items: center;
+    display: flex;
+    gap: 10px;
+    padding-bottom: 24px;
+}
+.button i {
+    /* CHANGED: Slightly Lighter Icons */
+    color: #c0c0c0; 
+    transition: 0.3s;
+    font-size: 24px;
+}
+
+.button i:hover {
+    transform: scale(1.3);
+    /* ACCENT COLOR: Neon Teal/Cyan */
+    color: #00f7c2; 
+}
+
+/* ================== ANIMATIONS ================== */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.slide-left {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.slide-left.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.slide-right {
+    opacity: 0;
+    transform: translateX(50px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.slide-right.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* ================== RESPONSIVE ================== */
+@media(max-width: 1024px) {
+    .main, #about {
+        flex-direction: column;
+        gap: 40px;
+        text-align: center;
+    }
+
+    .learn {
+        flex-direction: column;
+        gap: 30px;
+        align-items: center;
+    }
+
+    .call {
+        flex-direction: column;
+        align-items: center;
+    }
+}
