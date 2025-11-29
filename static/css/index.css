@@ -241,7 +241,7 @@ button a{
     /* CHANGED for Dark Theme: Project Box Background */
     background-color: #331551; 
     padding: 25px;
-    width: 350px;
+    width: 400px;
     border-radius: 15px;
     box-shadow: 0 6px 20px rgba(0,0,0,0.2);
     transition: transform 0.3s ease;
@@ -413,7 +413,7 @@ button a{
     /* CHANGED: Slightly Lighter Icons */
     color: #c0c0c0; 
     transition: 0.3s;
-    font-size: 24px;
+    font-size: 32px;
 }
 
 .button i:hover {
@@ -474,4 +474,48 @@ button a{
         flex-direction: column;
         align-items: center;
     }
+}
+#habit {
+    padding: 80px 50px;
+}
+
+#habit h1 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 50px;
+}
+
+.part {
+    display: flex;
+    /* flex-wrap: wrap; */
+    gap: 20px;
+    /* justify-content: center; */
+}
+.part1{
+    /* CHANGED for Dark Theme: Project Box Background */
+    background-color: #331551; 
+    padding: 25px;
+    width: 350px;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+}
+
+.part1:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.3);
+}
+
+.part1 h2 {
+    text-align: center;
+    /* ACCENT COLOR: Neon Teal/Cyan */
+    color: #00f7c2; 
+    margin-bottom: 15px;
+}
+.part1 img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-top: 15px;
 }
