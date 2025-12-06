@@ -19,8 +19,8 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 50px;
-    height: 80px;
+    padding: 0 30px;
+    height: 70px;
     /* CHANGED for Dark Theme: Slightly Lighter Purple for NavBar */
     background-color: #1e0238; 
     /* CHANGED: Darker Shadow */
@@ -73,28 +73,39 @@ button a{
     display: flex;
     gap: 80px;
     align-items: center;
-    /* height: 80vh; */
-}
-
-#circle {
-    width: 500px;
-    height: 540px;
-    border-radius: 50%;
-    overflow: hidden;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+   
 }
 
 #circle img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    width: 400px;
+    height: 430px;
+    border-radius: 50%;
+    overflow: hidden;
+
+    /* Glow like .box4 */
+    box-shadow:
+        0 0 20px rgba(160, 48, 192, 0.7),  /* Purple */
+        0 0 20px rgba(0, 255, 192, 0.4);   /* Green */
+
+    transition: 0.3s ease;
 }
 
+#circle img:hover {
+    box-shadow:
+        0 0 25px rgba(160, 48, 192, 1),
+        0 0 25px rgba(0, 255, 192, 0.6);
+}
+
+
+
+/* ____________________________________ */
 @keyframes float {
     0% { transform: translateY(0px); }
     50% { transform: translateY(-20px); }
     100% { transform: translateY(0px); }
 }
+
+
 
 .title {
     max-width: 600px;
@@ -113,6 +124,21 @@ button a{
 .title strong {
     /* ACCENT COLOR: Neon Teal/Cyan */
     color: #00f7c2; 
+}
+.title h2 strong,
+.title h3 strong.animated-text {
+    background: linear-gradient(90deg, #00f7c2, #ff4d4d, #4d79ff, #00f7c2);
+    background-size: 300% 100%; /* make the gradient bigger to animate */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientMove 5s linear infinite; /* automatic movement */
+    font-weight: bold;
+}
+
+@keyframes gradientMove {
+    0% { background-position: 0% 0%; }
+    50% { background-position: 100% 0%; }
+    100% { background-position: 0% 0%; }
 }
 
 .btn {
@@ -168,13 +194,15 @@ button a{
     width: 400px;
     border-radius: 15px;
     box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-}
+} 
+
 
 /* ================== SKILLS ================== */
 #skills {
     padding: 80px 50px;
     /* CHANGED for Dark Theme: Section Background Color */
     background-color: #1e0238; 
+    height: 80vh;
 }
 
 #skills h1 {
@@ -189,10 +217,11 @@ button a{
     gap: 20px;
     justify-content: center;
     animation: float 4s ease-in-out infinite;
+    
 }
 
 .box1 {
-    width: 140px;
+    width: 200px;
     text-align: center;
     /* CHANGED for Dark Theme: Darker Skill Box Background */
     background-color: #331551; 
@@ -228,6 +257,7 @@ button a{
     text-align: center;
     font-size: 32px;
     margin-bottom: 50px;
+    
 }
 
 .learn {
@@ -245,6 +275,7 @@ button a{
     border-radius: 15px;
     box-shadow: 0 6px 20px rgba(0,0,0,0.2);
     transition: transform 0.3s ease;
+    
 }
 
 .project1:hover {
@@ -296,8 +327,21 @@ button a{
     padding: 15px 20px;
     width: 600px;
     border-radius: 10px;
-    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+    box-shadow: 0 6px 15px rgba(189, 160, 160, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow:
+        0 0 30px rgba(160, 48, 192, 0.4), /* purple glow */
+        0 0 30px rgba(0, 255, 192, 0.2);  /* green glow */
+    
+    transition: 0.3s ease;
 }
+.box4:hover{
+     box-shadow:
+        0 0 30px rgba(160, 48, 192, 0.6),
+        0 0 30px rgba(0, 255, 192, 0.3);
+    transform: translateY(-5px); /* small lift */
+}
+
 
 .sticker img {
     width: 80px;
@@ -306,11 +350,15 @@ button a{
 }
 .photo img{
     width: 500px;
-    /* background-color: blue; */
     box-shadow: 0 6px 15px rgba(0,0,0,0.2);
-    /* margin-bottom: 200px; */
     border-radius: 10px;
+    transition: transform 0.3s ease;
 }
+.photo img:hover{
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.3);
+}
+
 
 /* ================== CONTACT ================== */
 #contact {
@@ -413,7 +461,7 @@ button a{
     /* CHANGED: Slightly Lighter Icons */
     color: #c0c0c0; 
     transition: 0.3s;
-    font-size: 32px;
+    font-size: 26px;
 }
 
 .button i:hover {
@@ -421,7 +469,9 @@ button a{
     /* ACCENT COLOR: Neon Teal/Cyan */
     color: #00f7c2; 
 }
-
+.address p{
+    font-size: 14px;
+}
 /* ================== ANIMATIONS ================== */
 .fade-in {
     opacity: 0;
