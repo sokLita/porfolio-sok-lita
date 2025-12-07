@@ -569,3 +569,248 @@ button a{
     border-radius: 10px;
     margin-top: 15px;
 }
+/* ================== RESPONSIVE (TABLET ≤ 1024px) ================== */
+@media (max-width: 1024px) {
+
+    /* Home section */
+    #home {
+        height: auto;
+        padding: 50px 20px;
+    }
+
+    .main {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+    }
+
+    #circle img {
+        width: 300px;
+        height: 330px;
+    }
+
+    /* About */
+    #about {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+    }
+
+    #rectangle img {
+        width: 320px;
+    }
+
+    /* Skills */
+    #skills {
+        height: auto;
+    }
+
+    /* Education box width */
+    .box4 {
+        width: 90%;
+    }
+
+    /* Habit */
+    .part {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .part1 {
+        width: 90%;
+        max-width: 350px;
+    }
+}
+
+
+/* ================== RESPONSIVE (PHONE ≤ 768px) ================== */
+@media (max-width: 768px) {
+
+    /* Navbar */
+    .container {
+        padding: 0 20px;
+    }
+
+    .navbar a {
+        padding: 10px;
+    }
+
+    /* Home */
+    #circle img {
+        width: 250px;
+        height: 280px;
+    }
+
+    .title h2 {
+        font-size: 28px;
+    }
+
+    .title h3 {
+        font-size: 22px;
+    }
+
+    /* About */
+    #rectangle img {
+        width: 260px;
+    }
+
+    /* Skills */
+    .box1 {
+        width: 150px;
+        padding: 15px;
+    }
+
+    .box1 img {
+        width: 50px;
+        height: 50px;
+    }
+
+    /* Project cards */
+    .project1 {
+        width: 90%;
+    }
+
+    /* Contact */
+    .phone {
+        margin-top: 50px;
+        text-align: center;
+    }
+}
+
+
+/* ================== RESPONSIVE (SMALL PHONE ≤ 480px) ================== */
+@media (max-width: 480px) {
+
+    /* ===== SMALL NAVBAR FOR PHONE ===== */
+    .container {
+        height: 50px;
+        padding: 0 10px;
+        gap: 60px;
+
+    }
+
+    .container h1 {
+        font-size: 16px;
+    }
+
+    .navbar a {
+        font-size: 12px;
+        padding: 5px;
+    }
+
+    /* ===== HOME SECTION ===== */
+    #home {
+        padding: 40px 20px;
+        height: auto;
+        text-align: center;
+    }
+
+    #circle img {
+        width: 180px;
+        height: 200px;
+    }
+
+    .title h2 {
+        font-size: 24px;
+    }
+
+    .title h3 {
+        font-size: 18px;
+    }
+
+    .btn {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        align-items: center;
+    }
+
+    .btn button {
+        width: 80%;
+    }
+
+    /* ===== ABOUT ===== */
+    #about {
+        padding: 50px 20px;
+        text-align: center;
+        gap: 20px;
+    }
+
+    #rectangle img {
+        width: 240px;
+    }
+
+    #aboutme {
+        font-size: 15px;
+    }
+
+    /* ===== SKILLS ===== */
+    #skills {
+        padding: 50px 20px;
+    }
+
+    .box1 {
+        width: 120px;
+        padding: 10px;
+    }
+
+    .box1 img {
+        width: 45px;
+        height: 45px;
+    }
+
+    /* ===== PROJECT ===== */
+    .project1 {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .project1 img {
+        height: 150px;
+    }
+
+    /* ===== EDUCATION ===== */
+    .box4 {
+        width: 100%;
+        flex-direction: column;
+        text-align: center;
+        padding: 12px;
+        gap: 12px;
+    }
+
+    .sticker img {
+        width: 55px;
+        height: 55px;
+    }
+
+    /* ===== HABIT ===== */
+    .part {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .part1 {
+        width: 100%;
+    }
+
+    /* ===== CONTACT ===== */
+    #contact {
+        padding: 50px 20px;
+    }
+
+    .input {
+        padding: 20px;
+    }
+
+    .input input,
+    .input textarea {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .phone {
+        margin-top: 50px;
+        text-align: center;
+        font-size: 14px;
+    }
+}
