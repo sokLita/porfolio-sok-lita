@@ -77,7 +77,7 @@ button a{
 }
 
 #circle img {
-    width: 400px;
+    width: 350px;
     height: 450px;
     border-radius: 50%;
     overflow: hidden;
@@ -213,23 +213,24 @@ button a{
 
 .hard {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;     
+    overflow-x: auto;      
     gap: 20px;
-    justify-content: center;
-    animation: float 4s ease-in-out infinite;
-    
+    padding-bottom: 10px;
 }
 
 .box1 {
-    width: 200px;
+    min-width: 220px;   /* important for scroll */
+    max-width: 220px;
     text-align: center;
-    /* CHANGED for Dark Theme: Darker Skill Box Background */
     background-color: #331551; 
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 6px 15px rgba(0,0,0,0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    flex-shrink: 0;     /* prevent shrinking */
 }
+
 
 .box1:hover {
     transform: translateY(-5px) scale(1.05);
@@ -237,8 +238,8 @@ button a{
 }
 
 .box1 img {
-    width: 60px;
-    height: 60px;
+    width: 100px;
+    height: 100px;
     margin-bottom: 10px;
 }
 
@@ -250,7 +251,7 @@ button a{
 
 /* ================== PROJECT ================== */
 #project {
-    padding: 80px 50px;
+    padding: 80px 20px;
 }
 
 #project h1 {
@@ -262,21 +263,22 @@ button a{
 
 .learn {
     display: flex;
-    flex-wrap: wrap;
-    gap: 40px;
-    justify-content: center;
+    flex-wrap: nowrap;     /* important */
+    overflow-x: auto;      /* enable scroll */
+    gap: 20px;
 }
 
 .project1 {
-    /* CHANGED for Dark Theme: Project Box Background */
     background-color: #331551; 
-    padding: 25px;
-    width: 400px;
+    padding: 20px;
+    min-width: 300px;     /* smaller and nicer */
+    max-width: 350px;     /* limit size */
     border-radius: 15px;
     box-shadow: 0 6px 20px rgba(0,0,0,0.2);
     transition: transform 0.3s ease;
-    
+    flex-shrink: 0;
 }
+
 
 .project1:hover {
     transform: translateY(-5px) scale(1.02);
@@ -297,6 +299,8 @@ button a{
     border-radius: 10px;
     margin-top: 15px;
 }
+
+
 
 /* ================== EDUCATION ================== */
 #edu {
@@ -525,6 +529,7 @@ button a{
         align-items: center;
     }
 }
+/* /* ____________workshop_________________________ */
 #habit {
     padding: 80px 50px;
 }
@@ -537,15 +542,17 @@ button a{
 
 .part {
     display: flex;
-    /* flex-wrap: wrap; */
+    flex-wrap: nowrap;
     gap: 20px;
     /* justify-content: center; */
-}
-.part1{
-    /* CHANGED for Dark Theme: Project Box Background */
+    overflow-x: auto ;
+    scroll-behavior: smooth;
+} 
+.part1 {
     background-color: #331551; 
-    padding: 25px;
-    width: 350px;
+    padding: 30px;          /* 🔼 more inside space */
+    width: 350px;           /* 🔼 bigger width */
+    min-width: 350px;       /* ✅ important if using scroll */
     border-radius: 15px;
     box-shadow: 0 6px 20px rgba(0,0,0,0.2);
     transition: transform 0.3s ease;
