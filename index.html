@@ -483,36 +483,7 @@
     </div>
     
     <!-- _________________-end contactpage __________________ -->
-     <script src="../static/js/anima.js"></script>
+     <script src="/index.js"></script>
   </body>
-   <script>
-    document.querySelector("button").addEventListener("click", function () {
-    const name = document.querySelectorAll("input")[0].value;
-    const email = document.querySelectorAll("input")[1].value;
-    const message = document.querySelector("#message").value;
-
-    const text = `New Message:
-    Name: ${name}
-    Email: ${email}
-    Message: ${message}`;
-
-    const token = "YOUR_BOT_TOKEN";
-    const chat_id = "YOUR_CHAT_ID";
-
-    const url = `https://api.telegram.org/bot${token}/sendMessage`;
-
-    fetch(url, {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify({
-            chat_id: chat_id,
-            text: text
-        })
-    })
-    .then(res => alert("Message sent to Telegram ✅"))
-    .catch(err => alert("Error sending message ❌"));
-});
-</script>
+   
 </html>
