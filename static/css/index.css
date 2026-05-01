@@ -617,10 +617,52 @@ button a{
 }
 .part1 img {
     width: 100%;
-    height: 180px;
+    height: 150px;
     object-fit: cover;
     border-radius: 10px;
     margin-top: 15px;
+}
+
+.part1 {
+    cursor: pointer;
+}
+
+.part1 .workshop-media {
+    position: relative;
+    margin-top: 12px;
+    border-radius: 12px;
+    overflow: hidden;
+    height: clamp(220px, 22vw, 280px);
+}
+
+.part1 .workshop-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    margin-top: 0;
+    border-radius: 0;
+}
+
+.part1 .workshop-media .hidden-content {
+    position: absolute;
+    inset: 0;
+    padding: 14px 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    background: rgba(18, 1, 36, 0.72);
+    opacity: 0;
+    transform: translateY(6px);
+    transition: opacity 0.25s ease, transform 0.25s ease;
+    pointer-events: none;
+}
+
+.part1.is-open .workshop-media .hidden-content,
+.part1:hover .workshop-media .hidden-content {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
 }
 /* ================== RESPONSIVE (TABLET ≤ 1024px) ================== */
 @media (max-width: 1024px) {
