@@ -380,8 +380,8 @@ button a{
     box-shadow: 0 6px 15px rgba(189, 160, 160, 0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     box-shadow:
-        0 0 30px rgba(160, 48, 192, 0.4), /* purple glow */
-        0 0 30px rgba(0, 255, 192, 0.2);  /* green glow */
+        0 0 10px rgba(160, 48, 192, 0.4), /* purple glow */
+        0 0 10px rgba(0, 255, 192, 0.2);  /* green glow */
     
     transition: 0.3s ease;
 }
