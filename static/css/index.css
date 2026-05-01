@@ -145,29 +145,39 @@ button a{
     100% { background-position: 0% 0%; }
 }
 
+.btn-group {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
 .btn {
-    margin-top: 30px;
-    display: flex;
-    gap: 20px;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
 }
 
-.btn button {
-    padding: 12px 25px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-weight: 600;
-    /* ACCENT COLOR: Neon Teal/Cyan */
-    background-color: #00f7c2; 
-    /* Dark Text on Bright Button */
-    color: #120124; 
-    transition: all 0.3s ease;
+/* Download button */
+.primary {
+  background-color: #6c2bd9;
+  color: white;
 }
 
-.btn button:hover {
-    /* Darker Teal for Hover */
-    transform: translateY(-5px) scale(1.05);
-    background-color: #00b08a; 
+.primary:hover {
+  background-color: #5a21b6;
+}
+
+/* Contact button */
+.secondary {
+  border: 2px solid #6c2bd9;
+  color: #6c2bd9;
+}
+
+.secondary:hover {
+  background-color: #6c2bd9;
+  color: white;
 }
 
 /* ================== ABOUT ================== */
