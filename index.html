@@ -23,8 +23,16 @@
     <div id="home">
         <div class="main">
             <div class="title">
-                <h2>This is <strong>PORTFOLIO,</strong></h2><br/>
-                <h3>I'm a Professional <strong class="animated-text">Software <br><br>Developer.</strong></h3><br/>
+                <h3>
+                    I'm a Professional 
+                    <strong class="animated-text">Software Developer</strong>
+                </h3><br>
+                <p>
+                    I am a student at <strong>Passerelles Numériques Cambodia (PNC)</strong>. <br><br>
+                    I am learning web development and improving my programming skills every day. <br><br>
+                    I enjoy building websites, solving problems, and learning new technologies. <br><br>
+                    I am a responsible and motivated person, and I am always ready to learn and grow in my career. <br>
+                </p>
                 <div class="btn-group">
                     <a href="cv.pdf" download class="btn primary">Download My CV</a>
                     <a href="#contact" class="btn secondary">Contact Me</a>
@@ -459,7 +467,7 @@
                     <a href="https://github.com/sokLita" target="_blank">
                         <i class="fa-brands fa-github"></i>
                     </a>
-                    <a href="https://t.me/Lii_june" target="_blank">
+                    <a href="https://t.me/Lita_Sok" target="_blank">
                         <i class="fa-brands fa-telegram"></i>
                     </a>
                      <a href="https://www.facebook.com/Lii june" target="_blank">
@@ -477,5 +485,34 @@
     <!-- _________________-end contactpage __________________ -->
      <script src="../static/js/anima.js"></script>
   </body>
-  <script src="index.js"></script>
+   <script>
+    document.querySelector("button").addEventListener("click", function () {
+    const name = document.querySelectorAll("input")[0].value;
+    const email = document.querySelectorAll("input")[1].value;
+    const message = document.querySelector("#message").value;
+
+    const text = `New Message:
+    Name: ${name}
+    Email: ${email}
+    Message: ${message}`;
+
+    const token = "YOUR_BOT_TOKEN";
+    const chat_id = "YOUR_CHAT_ID";
+
+    const url = `https://api.telegram.org/bot${token}/sendMessage`;
+
+    fetch(url, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            chat_id: chat_id,
+            text: text
+        })
+    })
+    .then(res => alert("Message sent to Telegram ✅"))
+    .catch(err => alert("Error sending message ❌"));
+});
+</script>
 </html>

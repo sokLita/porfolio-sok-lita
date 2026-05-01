@@ -115,35 +115,48 @@ button a{
     max-width: 600px;
 }
 
+/* Main title */
 .title h2 {
     font-size: 36px;
     font-weight: 700;
+    margin-bottom: 10px;
 }
 
+/* Subtitle */
 .title h3 {
     font-size: 28px;
-    margin-top: 10px;
+    margin-top: 5px;
+    line-height: 1.4;
 }
 
+/* Normal strong text */
 .title strong {
-    /* ACCENT COLOR: Neon Teal/Cyan */
-    color: #00f7c2; 
+    color: #00f7c2;
 }
+
+/* Animated gradient text */
 .title h2 strong,
 .title h3 strong.animated-text {
     background: linear-gradient(90deg, #00f7c2, #ff4d4d, #4d79ff, #00f7c2);
-    background-size: 300% 100%; /* make the gradient bigger to animate */
+    background-size: 300% 100%;
+    
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    animation: gradientMove 5s linear infinite; /* automatic movement */
+
+    animation: gradientMove 4s linear infinite;
     font-weight: bold;
 }
 
+/* Animation keyframes (IMPORTANT - you forgot this) */
 @keyframes gradientMove {
-    0% { background-position: 0% 0%; }
-    50% { background-position: 100% 0%; }
-    100% { background-position: 0% 0%; }
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
 }
+
 
 .btn-group {
   display: flex;
